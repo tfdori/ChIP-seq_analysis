@@ -21,6 +21,6 @@ The ChIP-seq data is available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc
 
 ## Files
 
-*ChIPseq_JEK.sh*
+*ChIPseq_JEK.sh* <br>
   Contains the report and the workflow of the analysis.
   The file paths correspond to my local computer. The scripts and input list files are available in the Scripts and ListFiles folders.
