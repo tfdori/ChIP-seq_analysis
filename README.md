@@ -18,3 +18,9 @@ The ChIP-seq data is available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc
 9. Identify the most enriched motifs
 10. Identify the affected genes (bedtools)
 11. Gene ontology ([PantherDB](https://pubmed.ncbi.nlm.nih.gov/12520017/))
+
+## Files
+
+*ChIPseq_JEK.sh*
+  Contains the report and the workflow of the analysis.
+  The file paths correspond to my local computer. The scripts and input list files are available in the Scripts and ListFiles folders.
