@@ -17,7 +17,7 @@ mkdir -p ${TARGET_DIR}
 # Define indexed reference genome
 refgenome="/shared/omics_data_analysis/DATA/reference_genomes/canis_familiaris/bowtie2_index/Canis_lupus_familiaris.ROS_Cfam_1.0"
 
-# Define the list file containing the name of fastq files
+# Define list file containing the prefixes of fastq files
 prefix_list="/home/jw0rtd/omics_data_analysis/ChIP_analysis/filename_prefix.txt"
 
 # Execute the alignment
