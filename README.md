@@ -1,7 +1,7 @@
 # ChIP-seq_analysis
 
 ## About the analysis
-I performed tissue-specific H3K27ac analysis on downloaded ChIP-seq data. This project was part of my university studies. The ChIP-seq data came  from four different tissues (cerebrum, kidney, liver, pancreas) of  adult Beagle dogs. H3K27ac modifications are epigenetic marks, that have an influence on chromatin structure and accessibility, thus indicate active promoters and enhancers.
+I performed tissue-specific H3K27ac analysis on downloaded ChIP-seq data. This project was part of my university studies, so it is NOT a real research work with published results! The ChIP-seq data came  from four different tissues (cerebrum, kidney, liver, pancreas) of  adult Beagle dogs. H3K27ac modifications are epigenetic marks, that have an influence on chromatin structure and accessibility, thus indicate active promoters and enhancers.
 
 ## Availability of ChIP-seq data
 The ChIP-seq data is available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE203104).
