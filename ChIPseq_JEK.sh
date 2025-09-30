@@ -9,7 +9,9 @@
 
 # Data: ChIP-seq from 4 tissues (liver, pancreas, kidney, cerebrum) and controls with no antibody
 
-# Samples: 2 dog / tissue + 1 control / tissue -> 12 samples
+# Samples: 2 dog/tissue + 1 control/tissue -> 12 samples
+
+# Illumina platforms: HiSeq and NovaSeq
 
 # =============================================================
 
@@ -105,15 +107,13 @@ bash ${WORK_DIR}/scripts/quality_control.sh
 # ------------
 # 3. Trimming
 # ------------
-# Article: "we first cropped the read length to 50 bp for all samples to remove the bias that may be caused by the difference in read length using Trimmomatic."
+
+# Large differences in read length due to difference of sequencing methods.
+# Some fastq files contains only 50 bp long reads, I do not trim them:
+  # CF_pancreas_SRR19225198_R1.fastq.gz, CF_pancreas_SRR19225198_R2.fastq.gz, F_kidney_SRR19225125_R1.fastq.gz, F_kidney_SRR19225125_R2.fastq.gz, F_pancreas_control_R1.fastq.gz, F_pancreas_control_R2.fastq.gz
 
 # Create directory for the output files
 mkdir /home/jw0rtd/omics_data_analysis/ChIP_analysis/0030_trimming 
-
-# Some fastq files contains only 50 bp long reads: CF_pancreas_SRR19225198_R1.fastq.gz, CF_pancreas_SRR19225198_R2.fastq.gz, F_kidney_SRR19225125_R1.fastq.gz, F_kidney_SRR19225125_R2.fastq.gz, F_pancreas_control_R1.fastq.gz, F_pancreas_control_R2.fastq.gz
-# I checked them:
-#zgrep "length=" CF_pancreas_SRR19225198_R1.fastq.gz | cut -d' ' -f 3 | uniq | wc -l
-# I do no trim these
 
 nohup bash ${WORK_DIR}/scripts/run_trimming.sh > ${WORK_DIR}/log_files/trimming.log 2> ${WORK_DIR}/log_files/trimming.err &
 
