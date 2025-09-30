@@ -16,11 +16,8 @@ do
 	
 	# Peak calling
 	macs2 callpeak -t ${INPUT_DIR}/${prefix_tr}.sorted.dedupl.bam -c ${INPUT_DIR}/${prefix_ctr}.sorted.dedupl.bam -f BAM -g 1.9e9 --broad -n ${prefix_tr} --outdir ${TARGET_DIR}/${prefix_tr} > ${TARGET_DIR}/${prefix_tr}/${prefix_tr}.log 2> ${TARGET_DIR}/${prefix_tr}/${prefix_tr}.err
-
-	# Parameters:
 		# -g: -> effective genome size is established by ucsc-facount program
 		# --broad -> broad peaks are also detected
-		# --keep-dup -> First, without this and then check the result! (Picard has already marked the duplications)
 
 done < ${prefix_list}
 
