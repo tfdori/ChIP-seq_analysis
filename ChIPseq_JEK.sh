@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Name: Dora Tfirst
+# Year of the analysis: 2025
 
 # ============================================================
 
@@ -9,8 +10,6 @@
 # Data: ChIP-seq from 4 tissues (liver, pancreas, kidney, cerebrum) and controls with no antibody
 
 # Samples: 2 dog / tissue + 1 control / tissue -> 12 samples
-
-# Illumina platforms: HiSeq and NovaSeq
 
 # =============================================================
 
@@ -256,16 +255,7 @@ grep -v "^#" ${annotation} | sed 's/;/\t/g' | sed 's/"//g' | sed 's/ /\t/g' | aw
 # Create file containing genes affected by peaks for gene ontology
 bash ${WORK_DIR}/scripts/peakGenes.sh
 
-# I copied the output files to my laptop and ran the GO analysis using PantherDB
 
-# Create directory for file lists and move them there 
-mkdir ${WORK_DIR}/filelists
-
-mv ${WORK_DIR}/dirlist_FE.txt ${WORK_DIR}/filelists
-mv ${WORK_DIR}/filename_prefix.txt ${WORK_DIR}/filelists
-mv ${WORK_DIR}/peak_filelist_annotate.txt ${WORK_DIR}/filelist
-mv ${WORK_DIR}/peak_filelist.txt ${WORK_DIR}/filelist
-mv ${WORK_DIR}/peak_filelist_intersect.txt ${WORK_DIR}/filelist
-mv ${WORK_DIR}/prefix_peakcall.tsv ${WORK_DIR}/filelist
+# Finally I performed a GO analysis on PantherDB: https://pantherdb.org/
 
 
