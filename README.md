@@ -7,19 +7,20 @@ I performed tissue-specific H3K27ac analysis on downloaded ChIP-seq data. This p
 The ChIP-seq data is available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE203104).
 
 ## Workflow
+0. Download raw data ([SRA toolkit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit))
 1. Quality control of raw data ([FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
 2. Trimming ([ShortRead](https://bioconductor.org/packages/release/bioc/html/ShortRead.html))
 3. Quality control of trimmed data (FastQC)
 4. Alignment ([Bowtie2](https://pubmed.ncbi.nlm.nih.gov/22388286/))
 5. Sorting, removing duplicates ([samtools](https://academic.oup.com/gigascience/article/10/2/giab008/6137722), [Picard](http://broadinstitute.github.io/picard/))
-6. Calculate alignment statistics
+6. Calculate alignment statistics (samtools)
 7. Peak calling, filtering ([macs2](https://github.com/macs3-project/MACS), [bedtools](https://pubmed.ncbi.nlm.nih.gov/25199790/))
 8. Motif discovery ([HOMER](https://pubmed.ncbi.nlm.nih.gov/20513432/))
 9. Identify the most enriched motifs
 10. Identify the affected genes (bedtools)
 11. Gene ontology ([PantherDB](https://pubmed.ncbi.nlm.nih.gov/12520017/))
 
-## Files
+## Folders and files
 
 ### Report file
 *ChIPseq_JEK.sh* <br>
@@ -27,7 +28,7 @@ The ChIP-seq data is available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc
   The file paths correspond to my local computer. The scripts and input list files are available in the Scripts and ListFiles folders.
 
 ### Scripts
-  folder contains the scripts I ran:
+  "scripts" folder contains the scripts I ran:
   - *quality_control.sh*
   - *quality_control2.sh*
   - *run_trimming.sh*
@@ -44,7 +45,7 @@ The ChIP-seq data is available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc
 
   
 ### List files
-  folder provide input files for scripts:
+  "list_files" folder provide input files for scripts:
   - *dirlist_FE.txt*
   - *filename_prefix.txt*
   - *filename_trim.txt*
@@ -54,6 +55,6 @@ The ChIP-seq data is available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc
   - *prefix_peakcall.tsv*
 
 Some files are not uploaded here:
-- reference genome ( [ROS_Cfam_1.0](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_014441545.1/) )
+- reference genome ([ROS_Cfam_1.0](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_014441545.1/))
 - genome annotation
   
