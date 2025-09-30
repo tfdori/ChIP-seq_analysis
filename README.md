@@ -21,6 +21,39 @@ The ChIP-seq data is available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc
 
 ## Files
 
+### Report file
 *ChIPseq_JEK.sh* <br>
   Contains the report and the workflow of the analysis.
   The file paths correspond to my local computer. The scripts and input list files are available in the Scripts and ListFiles folders.
+
+### Scripts
+  folder contains the scripts I ran:
+  - *quality_control.sh*
+  - *quality_control2.sh*
+  - *run_trimming.sh*
+  - *trimming_process.sh*
+  - *alignment_bowtie2.sh*
+  - *alignment_stat.sh*
+  - *peakcall.sh*
+  - *create_homer_input.sh*
+  - *filter_peaks.sh*
+  - *motif_search.sh*
+  - *knownResults_foldenrichment.sh*
+  - *homerResults_foldenrichment.sh*
+  - *peakGenes.sh*
+
+  
+### List files
+  folder provide input files for scripts:
+  - *dirlist_FE.txt*
+  - *filename_prefix.txt*
+  - *filename_trim.txt*
+  - *peak_filelist_annotate.txt*
+  - *peak_filelist_intersect.txt*
+  - *peak_filelist_test.txt*
+  - *prefix_peakcall.tsv*
+
+Some files are not uploaded here:
+- reference genome ( [ROS_Cfam_1.0](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_014441545.1/) )
+- genome annotation
+  
