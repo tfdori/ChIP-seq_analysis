@@ -3,7 +3,7 @@
 # Define working directory
 WORK_DIR="/home/jw0rtd/omics_data_analysis/ChIP_analysis"
 
-Rscript ${WORK_DIR}/scripts/trimming_process.R ${WORK_DIR}/0000_data/CF_pancreas_SRR19225199_R1.fastq.gz ${WORK_DIR}/0000_data/CF_pancreas_SRR19225199_R2.fastq.gz ${WORK_DIR}/0020_trimming/CF_liver_SRR19225122_R1_trim.fastq.gz ${WORK_DIR}/0020_trimming/CF_liver_SRR19225122_R2_trim.fastq.gz && \
+Rscript ${WORK_DIR}/scripts/trimming_process.R ${WORK_DIR}/0000_data/CF_pancreas_SRR19225199_R1.fastq.gz ${WORK_DIR}/0000_data/CF_pancreas_SRR19225199_R2.fastq.gz ${WORK_DIR}/0020_trimming/CF_pancreas_SRR19225199_R1_trim.fastq.gz ${WORK_DIR}/0020_trimming/CF_pancreas_SRR19225199_R2_trim.fastq.gz && \
 
 Rscript ${WORK_DIR}/scripts/trimming_process.R ${WORK_DIR}/0000_data/CF_liver_SRR19225122_R1.fastq.gz ${WORK_DIR}/0000_data/CF_liver_SRR19225122_R2.fastq.gz ${WORK_DIR}/0020_trimming/CF_liver_SRR19225122_R1_trim.fastq.gz ${WORK_DIR}/0020_trimming/CF_liver_SRR19225122_R2_trim.fastq.gz && \
 
