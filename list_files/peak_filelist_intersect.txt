@@ -1,0 +1,4 @@
+pancreas CF_pancreas_SRR19225198 CF_pancreas_SRR19225199
+liver CF_liver_SRR19225122 CF_liver_SRR19225123
+kidney CF_kidney_SRR19225124 CF_kidney_SRR19225125
+cerebrum CF_cerebrum_SRR19225152 CF_cerebrum_SRR19225153

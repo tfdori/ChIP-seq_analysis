@@ -1,0 +1,12 @@
+CF_pancreas_SRR19225198
+CF_pancreas_SRR19225199
+CF_liver_SRR19225122
+CF_liver_SRR19225123
+CF_kidney_SRR19225124
+CF_kidney_SRR19225125
+CF_cerebrum_SRR19225152
+CF_cerebrum_SRR19225153
+CF_pancreas_control
+CF_liver_control
+CF_kidney_control
+CF_cerebrum_control

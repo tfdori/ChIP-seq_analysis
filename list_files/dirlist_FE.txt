@@ -1,0 +1,7 @@
+/home/jw0rtd/omics_data_analysis/ChIP_analysis/0060_motifsearch/specMotifs/cere
+brum
+/home/jw0rtd/omics_data_analysis/ChIP_analysis/0060_motifsearch/specMotifs/liver
+/home/jw0rtd/omics_data_analysis/ChIP_analysis/0060_motifsearch/specMotifs/panc
+reas
+/home/jw0rtd/omics_data_analysis/ChIP_analysis/0060_motifsearch/specMotifs/kidn
+ey
