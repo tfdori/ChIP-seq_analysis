@@ -1,1 +1,1 @@
-This folder contains input list files (.lst) for the scripts and report file.
+This folder contains input list files for the scripts.
