@@ -13,12 +13,12 @@
 WORK_DIR="/home/jw0rtd/omics_data_analysis/ChIP_analysis"
 
 # --------------------------
-# 1. Download data from SRA
+# 1. Download Data from SRA
 # --------------------------
 
 mkdir /home/jw0rtd/omics_data_analysis/ChIP_analysis/0000_data
 
-# H3K27ac (Abcam, #ab8898): ~30 GB
+# H3K27ac (Abcam, #ab8898):
 
 # Pancreas:
 nohup /usr/local/bin/TELEPITETT/SRAtoolkit/sratoolkit.3.0.1-ubuntu64/bin/fastq-dump --split-files -O ${WORK_DIR}/0000_data -gzip SRR19225198 > /home/jw0rtd/omics_data_analysis/ChIP_analysis/0000_data/SRR19225198.log 2> /home/jw0rtd/omics_data_analysis/ChIP_analysis/0000_data/SRR19225198.err &
@@ -55,7 +55,7 @@ nohup /usr/local/bin/TELEPITETT/SRAtoolkit/sratoolkit.3.0.1-ubuntu64/bin/fastq-d
 #nohup /usr/local/bin/TELEPITETT/SRAtoolkit/sratoolkit.3.0.1-ubuntu64/bin/fastq-dump --split-files -O ${WORK_DIR}/0000_data -gzip SRR19225143 > /home/jw0rtd/omics_data_analysis/ChIP_analysis/0000_data/SRR19225143.log 2> /home/jw0rtd/omics_data_analysis/ChIP_analysis/0000_data/SRR19225143.err &
 
 
-# Creating symbolic links to make them more meaningful
+# Create symbolic links to make them more meaningful
 
 # Pancreas
 ln -s ${WORK_DIR}/0000_data/SRR19225198_1.fastq.gz ${WORK_DIR}/0000_data/CF_pancreas_SRR19225198_R1.fastq.gz
@@ -102,19 +102,19 @@ bash ${WORK_DIR}/scripts/quality_control.sh
 # 3. Trimming
 # ------------
 
-# Large differences in read length due to difference of sequencing methods.
-# Some fastq files contains only 50 bp long reads, I do not trim them:
-  # CF_pancreas_SRR19225198_R1.fastq.gz, CF_pancreas_SRR19225198_R2.fastq.gz, F_kidney_SRR19225125_R1.fastq.gz, F_kidney_SRR19225125_R2.fastq.gz, F_pancreas_control_R1.fastq.gz, F_pancreas_control_R2.fastq.gz
+# Large differences in read length due to different sequencing methods.
+# Fastq files containing only 50 bp long reads are not trimmed:
+# CF_pancreas_SRR19225198_R1.fastq.gz, CF_pancreas_SRR19225198_R2.fastq.gz, F_kidney_SRR19225125_R1.fastq.gz, F_kidney_SRR19225125_R2.fastq.gz, F_pancreas_control_R1.fastq.gz, F_pancreas_control_R2.fastq.gz
 
 # Create directory for the output files
 mkdir /home/jw0rtd/omics_data_analysis/ChIP_analysis/0030_trimming 
 
 nohup bash ${WORK_DIR}/scripts/run_trimming.sh > ${WORK_DIR}/log_files/trimming.log 2> ${WORK_DIR}/log_files/trimming.err &
 
-# Creating directory for log file
+# Create directory for log files
 mkdir ${WORK_DIR}/log_files
 
-# Remove raw data which has been trimmed
+# Remove raw data that has been trimmed
 cd /home/jw0rtd/omics_data_analysis/ChIP_analysis/0000_data
 # CF_pancreas_SRR19225199:
 rm SRR19225199_1.fastq.gz SRR19225199_2.fastq.gz
@@ -135,7 +135,7 @@ rm SRR19225138_1.fastq.gz SRR19225138_2.fastq.gz
 # CF_cerebrum_control:
 rm SRR19225142_1.fastq.gz SRR19225142_2.fastq.gz
 
-# unlink symbolic links
+# Unlink symbolic links
 unlink CF_pancreas_SRR19225199_R1.fastq.gz
 unlink CF_pancreas_SRR19225199_R2.fastq.gz
 unlink CF_liver_SRR19225122_R1.fastq.gz
@@ -179,19 +179,19 @@ nohup bash /home/jw0rtd/omics_data_analysis/ChIP_analysis/scripts/alignment_bowt
 
 
 # ------------------------
-# 6. Alignment statistics
+# 6. Alignment Statistics
 # ------------------------
 
 nohup bash ${WORK_DIR}/scripts/alignment_stat.sh > ${WORK_DIR}/log_files/flagstat_stat.log 2> ${WORK_DIR}/log_files/flagstat_stat.err &
 
 # ----------------
-# 7. Peak calling
+# 7. Peak Calling
 # ----------------
 
 nohup bash ${WORK_DIR}/scripts/peakcall.sh > ${WORK_DIR}/log_files/peackcall.log 2> ${WORK_DIR}/log_files/peackcall.err &
 
 # -------------------------------------------
-# 8. Filter shared and tissue-specific peaks
+# 8. Filter Shared and Tissue-Specific Peaks
 # -------------------------------------------
 
 # Add "chr" to the BED files
@@ -200,7 +200,7 @@ bash ${WORK_DIR}/scripts/create_homer_input.sh
 # Search for shared peaks within and between tissues, and tissue-specific peaks
 bash ${WORK_DIR}/scripts/filter_peaks.sh
 
-# Removing "chr" form bed files (not needed!)
+# Removing "chr" from bed files (not needed)
 SPEC_DIR="/home/jw0rtd/omics_data_analysis/ChIP_analysis/0050_peakcalling/specPeaks"
 SHARED_DIR="/home/jw0rtd/omics_data_analysis/ChIP_analysis/0050_peakcalling/overlapPeaks"
 
@@ -216,14 +216,14 @@ sed -i 's/^chr//g' ${SHARED_DIR}/tissues_shared_peaks.broadPeak
 
 
 # -----------------
-# 9. Motif search
+# 9. Motif Search
 # -----------------
 
 # Motif search in tissue-specific and shared peaks
 nohup bash ${WORK_DIR}/scripts/motif_search.sh > ${WORK_DIR}/log_files/motifsearch2.log 2> ${WORK_DIR}/log_files/motifsearch2.err &
 
 # --------------------------------
-# 10. Filter most enriched motifs
+# 10. Filter Most Enriched Motifs
 # --------------------------------
 
 # 1) knownResults -> known TFs
@@ -235,7 +235,7 @@ bash ${WORK_DIR}/scripts/knownResults_foldenrichment.sh
 bash ${WORK_DIR}/scripts/homerResults_foldenrichment.sh
 
 # -------------------
-# 11. Affected genes
+# 11. Affected Genes
 # -------------------
 
 mkdir /home/jw0rtd/omics_data_analysis/ChIP_analysis/0070_peakannotate/
