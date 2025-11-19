@@ -1,9 +1,9 @@
 # ChIP-seq_analysis
 
-## About the analysis
+## About the Analysis
 I performed a tissue-specific H3K27ac analysis on downloaded ChIP-seq data. This project was part of my university studies, so it is NOT a real research work and does not include published results. The ChIP-seq data are derived from four tissues (cerebrum, kidney, liver, pancreas) of  adult Beagle dogs. The H3K27ac modification is an epigenetic mark that influences the chromatin structure and accessibility, indicating active promoters and enhancers.
 
-## Availability of ChIP-seq data
+## Availability of ChIP-seq Data
 The ChIP-seq data is available on [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE203104).
 
 ## Workflow and Required Software
@@ -27,9 +27,9 @@ The peaks were visually checked with [IGV](https://igv.org/).
 ## Attention
 The project is memory-, disk- and CPU intensive.
 
-## Folders and files
+## Folders and Files
 
-### Report file
+### Report File
 *ChIPseq_JEK.sh* <br>
   Contains the main report and the workflow.
   The file paths correspond to my local computer. The scripts and input list files are available in the scripts and list_files folders.
@@ -51,7 +51,7 @@ The project is memory-, disk- and CPU intensive.
   - *peakGenes.sh*
 
   
-### List files
+### List Files
   "list_files" folder provide input files for scripts:
   - *dirlist_FE.txt*
   - *filename_prefix.txt*
