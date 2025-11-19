@@ -16,8 +16,5 @@ do
 
 done < ${input_dir_list}
 
-# Fold enrichment: "Fold Enrichment is defined as the percentage of genes in your list belonging to a pathway, divided by the corresponding percentage in the background."
-
-
 
 exit
