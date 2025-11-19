@@ -1,15 +1,15 @@
 # ChIP-seq_analysis
 
 ## About the analysis
-I performed tissue-specific H3K27ac analysis on downloaded ChIP-seq data. This project was part of my university studies, so it is NOT a real research work with published results! The ChIP-seq data came  from four different tissues (cerebrum, kidney, liver, pancreas) of  adult Beagle dogs. H3K27ac modifications are epigenetic marks, that have an influence on chromatin structure and accessibility, thus indicate active promoters and enhancers.
+I performed a tissue-specific H3K27ac analysis on downloaded ChIP-seq data. This project was part of my university studies, so it is NOT a real research work and does not include published results. The ChIP-seq data are derived from four tissues (cerebrum, kidney, liver, pancreas) of  adult Beagle dogs. The H3K27ac modification is an epigenetic mark that influences the chromatin structure and accessibility, indicating active promoters and enhancers.
 
 ## Availability of ChIP-seq data
-The ChIP-seq data is available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE203104).
+The ChIP-seq data is available on [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE203104).
 
-## Workflow
+## Workflow and Required Software
 0. Download raw data ([SRA toolkit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit))
 1. Quality control of raw data ([FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
-2. Trimming ([ShortRead](https://bioconductor.org/packages/release/bioc/html/ShortRead.html))
+2. Trimming (R language, [ShortRead](https://bioconductor.org/packages/release/bioc/html/ShortRead.html))
 3. Quality control of trimmed data (FastQC)
 4. Alignment ([Bowtie2](https://pubmed.ncbi.nlm.nih.gov/22388286/))
 5. Sorting, removing duplicates ([samtools](https://academic.oup.com/gigascience/article/10/2/giab008/6137722), [Picard](http://broadinstitute.github.io/picard/))
@@ -20,12 +20,17 @@ The ChIP-seq data is available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc
 10. Identify the affected genes (bedtools)
 11. Gene ontology ([PantherDB](https://pubmed.ncbi.nlm.nih.gov/12520017/))
 
+The effective genome size was calculated using [faCount](https://anaconda.org/bioconda/ucsc-facount).
+
+## Attention
+The project is memory-, disk- and CPU intensive.
+
 ## Folders and files
 
 ### Report file
 *ChIPseq_JEK.sh* <br>
-  Contains the report and the workflow of the analysis.
-  The file paths correspond to my local computer. The scripts and input list files are available in the Scripts and ListFiles folders.
+  Contains the main report and the workflow.
+  The file paths correspond to my local computer. The scripts and input list files are available in the scripts and list_files folders.
 
 ### Scripts
   "scripts" folder contains the scripts I ran:
@@ -54,7 +59,7 @@ The ChIP-seq data is available [here](https://www.ncbi.nlm.nih.gov/geo/query/acc
   - *peak_filelist_test.txt*
   - *prefix_peakcall.tsv*
 
-Some files are not uploaded here:
+Some files are not uploaded:
 - reference genome ([ROS_Cfam_1.0](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_014441545.1/))
 - genome annotation
   
