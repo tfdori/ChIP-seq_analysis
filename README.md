@@ -21,7 +21,8 @@ The ChIP-seq data is available on [GEO](https://www.ncbi.nlm.nih.gov/geo/query/a
 11. Gene ontology ([PantherDB](https://pubmed.ncbi.nlm.nih.gov/12520017/))
 
 The effective genome size was calculated using [faCount](https://anaconda.org/bioconda/ucsc-facount).
-Th peaks were also checked using [IGV](https://igv.org/).
+
+The peaks were visually checked with [IGV](https://igv.org/).
 
 ## Attention
 The project is memory-, disk- and CPU intensive.
