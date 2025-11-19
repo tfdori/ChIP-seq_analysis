@@ -5,7 +5,7 @@
 library("ShortRead")
 
 
-# Adding inut arguments (files) to variables
+# Add input arguments (files) to variables
 ARGS <- commandArgs(trailingOnly=T)
 input_fastq_R1 <- ARGS[1]
 input_fastq_R2 <- ARGS[2]
@@ -20,7 +20,7 @@ fq_2 <- readFastq(input_fastq_R2)
 fq_1_trimmed <- narrow(fq_1, start = 1, end = 50)
 fq_2_trimmed <- narrow(fq_2, start = 1, end = 50)
 
-# Creating output files
+# Create output files
 writeFastq(fq_1_trimmed, output_fastq_R1, compress = TRUE)
 writeFastq(fq_2_trimmed, output_fastq_R2, compress = TRUE)
 
