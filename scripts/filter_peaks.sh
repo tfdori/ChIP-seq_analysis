@@ -14,9 +14,8 @@ mkdir -p ${WORK_DIR}/overlapPeaks
 # Check the shared peaks within tissues
 while read -r tissue inputfile1 inputfile2
 do
-	# Exact coordinates of overlap
+	# Extract coordinates of overlap
 	bedtools intersect -a ${WORK_DIR}/${inputfile1}/${inputfile1}_homer.broadPeak -b ${WORK_DIR}/${inputfile2}/${inputfile2}_homer.broadPeak -u > ${WORK_DIR}/overlapPeaks/${tissue}_shared_peaks.broadPeak
-	# output: lines of -a file are written in the output if there is an overlap
 
 done < ${input_filelist}
 
@@ -26,7 +25,7 @@ done < ${input_filelist}
 
 WORK_DIR="/home/jw0rtd/omics_data_analysis/ChIP_analysis/0050_peakcalling/overlapPeaks"
 
-# Execute the tissue comparison with multiple
+# Execute the tissue comparison
 bedtools intersect -a ${WORK_DIR}/liver_shared_peaks.broadPeak -b ${WORK_DIR}/kidney_shared_peaks.broadPeak -u | bedtools intersect -a - -b ${WORK_DIR}/pancreas_shared_peaks.broadPeak -u | bedtools intersect -a - -b ${WORK_DIR}/cerebrum_shared_peaks.broadPeak -u > ${WORK_DIR}/tissues_shared_peaks.broadPeak
 
 
