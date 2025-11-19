@@ -1,16 +1,10 @@
 #!/bin/bash
 
-# Name: Dora Tfirst
-# Year of the analysis: 2025
-
 # ============================================================
 
 # Project: Tissue-specific analysis of H3K27ac ChIP-seq data in dog tissues
-
 # Data: ChIP-seq from 4 tissues (liver, pancreas, kidney, cerebrum) and controls with no antibody
-
 # Samples: 2 dog/tissue + 1 control/tissue -> 12 samples
-
 # Illumina platforms: HiSeq and NovaSeq
 
 # =============================================================
