@@ -30,9 +30,8 @@ The project is memory-, disk- and CPU intensive.
 ## Folders and Files
 
 ### Report File
-*ChIPseq_JEK.sh* <br>
-  Contains the main report and the workflow.
-  The file paths correspond to my local computer. The scripts and input list files are available in the scripts and list_files folders.
+*ChIPseq_report.sh* <br>
+  Contains the main report and the workflow. All scripts are initialized and run from this file. The scripts and input list files can be found in the scripts and list_files folders.
 
 ### Scripts
   "scripts" folder contains the scripts I ran:
