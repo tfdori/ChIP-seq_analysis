@@ -1,12 +1,15 @@
 # ChIP-seq_analysis
 
-## About the Analysis
-I performed a tissue-specific H3K27ac analysis on downloaded ChIP-seq data. This project was part of my university studies, so it is NOT a real research work and does not include published results. The ChIP-seq data are derived from four tissues (cerebrum, kidney, liver, pancreas) of  adult Beagle dogs. The H3K27ac modification is an epigenetic mark that influences the chromatin structure and accessibility, indicating active promoters and enhancers.
+Author: Dóra Tfirst <br>
+Year of the analysis: 2025
 
-## Availability of ChIP-seq Data
+## About the Analysis 📑🐶
+I performed a tissue-specific analysis of H3K27ac ChIP-seq data in dogs. This project was part of my university studies, so it is NOT a real research work and does not include published results. The ChIP-seq data are derived from four tissues (cerebrum, kidney, liver, pancreas) of adult Beagle dogs. The H3K27ac modification is an epigenetic mark that influences the chromatin structure and accessibility, indicating active promoters and enhancers.
+
+## Availability of ChIP-seq Data 🧬
 The ChIP-seq data is available on [GEO](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE203104).
 
-## Workflow and Required Software
+## Workflow and Required Software 💻
 0. Download raw data ([SRA toolkit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit))
 1. Quality control of raw data ([FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
 2. Trimming (R language, [ShortRead](https://bioconductor.org/packages/release/bioc/html/ShortRead.html))
@@ -24,10 +27,10 @@ The effective genome size was calculated using [faCount](https://anaconda.org/bi
 
 The peaks were visually checked with [IGV](https://igv.org/).
 
-## Attention
+## Attention❗
 The project is memory-, disk- and CPU intensive.
 
-## Folders and Files
+## Folders and Files 📁
 
 ### Report File
 *ChIPseq_report.sh* <br>
