@@ -33,8 +33,8 @@ The project is memory-, disk- and CPU intensive.
 ## Folders and Files 📁
 
 ### Report File
-*ChIPseq_report.sh* <br>
-  Contains the main report and the workflow. All scripts are initialized and run from this file. The scripts and input list files can be found in the scripts and list_files folders.
+*ChIPseq_workflow.sh* <br>
+  Contains the main workflow. All scripts are initialized and run from this file. The scripts and input list files can be found in the scripts and list_files folders.
 
 ### Scripts
   "scripts" folder contains the scripts I ran:
